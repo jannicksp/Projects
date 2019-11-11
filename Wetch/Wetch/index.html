@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wetch Movie App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"
+  <meta name="description" content="Wetch Web App">
+  <meta name="author" content="Jannick, Ian, Burhan">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <!-- tabbar navigation Jannick-->
+  <nav id="tabbar" class="tabbar hide">
+    <a class="fa fa-fw fa-home" href="#home" onclick="showPage('home')">
+      <!-- <img src="/spa_firebase_login/img/man-icon.png">--></a>
+    <a href="#about" onclick="showPage('about')">Feed</a>
+    <a href="#clients" onclick="showPage('clients')">Friends</a>
+    <a class="fa fa-fw fa-user" href="#profile" onclick="showPage('profile')"></a>
+  </nav>
+
+  <!-- pages -->
+  <!-- home page -->
+  <!--Jannick-->
+  <section id="home" class="page">
+    <header class="topbar">
+      <div id="flexmenu">
+        <div class="container" onclick="myBurger(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <h2>Wetch</h2>
+        <div class="fa fa-fw fa-search" id="searchappear" onclick="showSearch"></div>
+      </div>
+
+    </header>
+    <input class="scale-up-center" id="search" type="search" placeholder="Search" onkeyup="search(this.value)">
+<div id="flexsort">
+<select>
+    <option >Sort Alphabetical </option>
+    <option >Sort Genre</option>
+    <option >Sort Newest</option>
+    <option >Sort Oldest</option>
+    <option >Sort Best Reviews</option>
+</select>
+<button class="puff-in-center" onclick="sortMovies()">Sort by</button>
+</div>
+    <p id="demo"></p>
+    <div id="content" class="grid-container"></div>
+    <div>
+    <h2>Add New Movie</h2>
+    <img id="newappear" onclick="shownew" src="img/addmovie2.png" alt="addmovie">
+  </div>
+
+   <!-- Place to input movie title and search for it in the OMDB API-->
+   <form id= "addMovieBox">
+   <div id="searchresults">
+    <input id="apiSearchResults" type="search" placeholder="Search" onkeyup="apisearch(this.value)">
+    <div id="grid-products" class="grid-container2"></div>
+  </div>
+  <input type="number" id="yourRating" placeholder="Your rating from 1-10" required>
+  <br>
+    <input type="text" id="movieName" placeholder="Movie Name and Year" required>
+    <input type="text" id="movieRating" placeholder="IMDB Rating" required>
+    <input type="text" id="moviePlot" placeholder="Movie Plot" required>
+    <input type="text" id="movieGenre" placeholder="Movie genre" required>
+    <input type="text" id="movieImg" placeholder="Image URL" required>
+    <button type="button" id="addMovieButton" name="button" onclick="createMovie(), createMovieFeed()">Add Movie</button>
+  </form>
+  <!--Opdater Film Jannick
+  <form>
+    <h2>Opdater Film</h2>
+    <input type="text" id="name-update" required>
+    <input type="email" id="mail-update" required>
+    <button type="button" name="button" onclick="updateMovie()">Opdater Film</button>
+  </form>  -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+      <!-- Firebase Firestore (database) JS SDK -->
+      <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+  </section>
+
+  <!-- Feed -->
+  <section id="about" class="page">
+    <header class="topbar">
+      <h2>Feed</h2>
+    </header>
+  <div id="feedContent" class="grid-container"></div>
+
+  </section>
+
+  <!-- Friend list -->
+  <section id="clients" class="page">
+    <header class="topbar">
+      <h2>Friends</h2>
+    </header>
+    <p>List of friends</p>
+  </section>
+
+  <!-- profile page -->
+  <section id="profile" class="page">
+    <header class="topbar">
+      <h2>Profile</h2>
+      <a class="right" href="#" onclick="logout()">Logout</a>
+    </header>
+    <form>
+      <label>Profile Image</label>
+      <input type="file" id="img" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
+      <img id="imagePreview" class="image-preview" src="/img/pic-placeholder.png" alt="imagePreview">
+         <label for="name">Name</label>
+         <input type="text" id="name" placeholder="Type your name" required>
+         <label for="mail">Mail</label>
+         <input type="email" id="mail" placeholder="Type your mail" required>
+         <label for="birthdate">Birthdate</label>
+         <input type="text" id="birthdate" placeholder="Type your birthdate" required>
+         <button id="addMovieButton" type="button" name="button" onclick="updateUser()">Save</button>
+       </form>
+  </section>
+
+  <section id="login" class="page">
+    <header class="topbar">
+      <h2>Wetch</h2>
+
+    </header>
+    <!-- firebase auth container  -->
+    <div id="firebaseui-auth-container"></div>
+  </section>
+
+  <!-- loader  -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
