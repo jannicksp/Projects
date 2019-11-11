@@ -1,0 +1,620 @@
+header h1 {
+    color: #ffffff;
+    font-size: 48px;
+}
+
+
+/*Main*/
+
+/* example to be deleted*/
+p {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+/*Navigation with flexbox mobile first*/
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    /*
+    background: url(../images/baggrundsbillede.png);
+    background-size: cover;
+    */
+
+    background: url(../images/baggrund.png);
+    display: block;
+
+    padding-bottom: 1%;
+
+
+
+    /* link farve */
+}
+
+a:link {
+    color: #9e3433;
+    background-color: transparent;
+    text-decoration: none;
+
+
+}
+
+a:visited {
+    color: #9e3433;
+    background-color: transparent;
+    text-decoration: none;
+}
+/* forside*/
+slideshow {
+    display: block;
+}.mySlides {
+    border-radius: 5%;
+    margin: auto;
+    border: 5px solid white;
+}
+
+#bestil {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 60px;
+    width: 60%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#bestil h2 {
+    position: relative;
+    margin: auto;
+    width: 118%;
+    top: 26%;
+    padding-left: 14%;
+
+}
+
+.forsidecontainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 220px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.forsidecontainer p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    line-height: 25px;
+
+}
+
+
+.forsidecontainer h1 {
+    font-size: 15px;
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+
+}
+
+.forsidecontaineren {
+    background-color: #9e3433;
+    color: white;
+    height: 220px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 5%;
+    margin-top: 0%;
+    border-radius: 5%;
+}
+
+.forsidecontaineren p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    line-height: 25px;
+    padding-top: 5%;
+    top: 5%
+}
+
+.forsidecontaineren h1 {
+    font-size: 15px;
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+.forsidebokse {
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9e3433;
+}
+#laesmere{
+font-style: oblique;
+    text-align: center;
+
+}
+#laesmere a:hover {
+    color: black; 
+}
+
+#laesmeresort{
+font-style: oblique;
+    text-align: center;
+}
+/*spil*/
+
+.spilcontainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 170px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+
+}
+
+.spilcontainer p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    line-height: 25px;
+
+}
+
+
+.spilcontainer h1 {
+    font-size: 15px;
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+#kr {
+    color: #9e3433;
+}
+
+/* mad og drikke fanen*/
+.photocontainer img {
+    width: 90%;
+
+    margin: 5%;
+    border-radius: 5%;
+    border: 5px solid white;
+}
+
+
+.textcontainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 140px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.textcontainer p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    line-height: 25px;
+
+}
+
+
+.textcontainer h1 {
+    font-size: 15px;
+    width: 21%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+.textcontaineren {
+    background-color: #9e3433;
+    color: white;
+    height: 150px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 5%;
+    margin-top: 0%;
+    border-radius: 5%;
+}
+
+.textcontaineren p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    line-height: 25px;
+    padding-top: 5%
+}
+
+.textcontaineren h1 {
+    font-size: 15px;
+    width: 33%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+
+
+/*OM FANEN
+*/
+.omphotocontainer img {
+    width: 90%;
+
+    margin: 5%;
+    border-radius: 5%;
+    border: 5px solid white;
+    margin-bottom: 10%;
+}
+
+.omcontainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 440px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.omcontainer p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    line-height: 25px;
+
+}
+
+
+.omcontainer h1 {
+    font-size: 15px;
+    width: 15%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+
+}
+
+.omcontaineren {
+    background-color: #9e3433;
+    color: white;
+    height: 500px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 5%;
+    margin-top: 0%;
+    border-radius: 5%;
+}
+
+.omcontaineren p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    line-height: 25px;
+    padding-top: 5%;
+    top: 5%
+}
+
+.omcontaineren h1 {
+    font-size: 15px;
+    width: 65%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+/* Kontakt Fanen */
+
+.kontaktcontaineren {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 210px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.kontaktcontaineren p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    line-height: 25px;
+
+}
+
+
+.kontaktcontaineren h1 {
+    font-size: 15px;
+    width: 40%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+
+.kontaktcontainer {
+    background-color: #9e3433;
+    color: white;
+    height: 200px;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin: 5%;
+    margin-top: 0%;
+    border-radius: 5%;
+}
+
+.kontaktcontainer p {
+    font-size: 12px;
+    width: 73%;
+    margin: auto;
+    position: relative;
+    line-height: 25px;
+    padding-top: 5%;
+    top: 5%
+}
+
+.kontaktcontainer h1 {
+    font-size: 15px;
+    width: 15%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+}
+
+/* header
+*/
+header {
+    background: black;
+    width: 100%;
+    padding: 0 20px;
+
+}
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin-left: .5em;
+
+}
+
+#logo-burger a {
+    padding-left: 27%;
+
+}
+
+
+#logo img {
+    width: 50%;
+}
+
+#logo,
+#main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    padding-bottom: 4%;
+}
+
+
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+#main-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    padding: 40px 0;
+    height: 215px;
+
+}
+
+footer section {
+    width: 33%;
+    float: left;
+    text-align: center;
+
+
+
+}
+
+footer p {
+    color: white;
+
+}
+
+
+footer img {
+    width: 42px;
+}
+
+.sec1 img {}
+
+#vestergade {
+    color: #9e3433;
+}
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        color: white;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav li {
+        text-align: center;
+    }
+
+    #main-nav a {
+        margin: 0;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+
+
+
+    /*MEDIA QUERY TABLET AND ABOVE*/
+
+    @media all and (min-width: 600px) {
+
+        /*HEADER NAV*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            /*remove this if you do not want the column layout whit logo above menu for medium size screens*/
+        }
+
+        #logo-burger {
+            margin: 0;
+
+        }
+
+        #logo {
+            margin-top: .3em;
+        }
+
+        #main-nav {
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+        }
+
+        #main-nav a {
+            margin: 0 .5em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        label {
+            display: none;
+        }
+
+    }
+
+    /*MEDIA QUERY LAPTOP AND ABOVE*/
+
+    @media all and (min-width: 1024px) {
+
+        /*HEADER*/
+        header {
+            flex-direction: row;
+            align-items: center;
+        }
+
+    }
