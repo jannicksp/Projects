@@ -1,0 +1,288 @@
+/*CSS document*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {}
+
+header img {
+    width: 215px;
+    margin-left: 20px;
+}
+
+#headerimage {
+    background-image: url(../images/headerbackground.jpg);
+    background-size: cover;
+    padding-top: 10px;
+}
+
+#headerimage img {
+    margin-bottom: 5px;
+}
+
+nav {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 40px;
+}
+
+nav img {
+    float: left;
+    padding-top: 12px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 50px 0 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    font-size: 20px;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 8px 16px 9px 16px;
+    text-decoration: none;
+}
+
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 16px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HEADER SLUT */
+
+/* BIGPHOTO FORSIDE */
+main {
+    background-color: skyblue;
+    color: white;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+
+
+}
+
+#bigphotocontainer {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+slideshow {
+    display: block;
+}
+
+.mySlides {
+    border-radius: 5%;
+    margin: auto;
+    border: 5px solid white;
+    align-items: center;
+    width: 25%;
+}
+
+#bigphotocontainer {
+    display: block;
+    color: white;
+}
+
+#bigphotocontainer p {
+    color: black;
+    column-count: 3;
+    text-align: center;
+}
+
+#bigphotocontainer h1 {
+    color: black;
+
+    text-align: center;
+
+}
+
+#bigphotocontainer h2 {
+    color: black;
+
+    text-align: center;
+}
+
+.pictures img {
+    display: inline-block;
+    border-radius: 5%;
+    border: 5px solid white;
+    margin-left: 34%;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+}
+
+/* FOOTER */
+footer {
+    background-color: whitesmoke;
+    padding: 40px 0;
+    height: 100px;
+}
+
+footer section {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+footer img {
+    width: 32px;
+}
+
+
+.lowprofile {
+    color: black;
+}
+
+/*when you develop mobile first responsive pages, you add rules for different device sizes after all the global rules, starting with the smallest screen size*/
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {}
+
+    header img {
+        width: 315px;
+        margin-left: 5px;
+    }
+
+    #headerimage {
+        background-image: url(../images/headerbackground.jpg);
+        background-size: cover;
+        padding-top: 10px;
+    }
+
+    #headerimage img {
+        margin-bottom: 5px;
+    }
+
+    nav {
+        background-color: whitesmoke;
+        width: 100%;
+        height: 100px;
+    }
+
+    nav img {
+        float: left;
+        padding-top: 2px;
+        padding-bottom: 15px;
+        padding-left: 14px
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0 30px 0 0;
+        padding: 0;
+        justify-content: space-between;
+        float: right;
+        column-count: 1;
+
+    }
+
+    nav li {
+        float: left;
+    }
+
+    nav li a {
+        font-size: 20px;
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 10px 1px 1px 1px;
+        column-count: 1;
+        text-decoration: none;
+    }
+
+
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: whitesmoke;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        font-size: 16px;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+    /*MEDIA QUERY TABLET AND ABOVE*/
+
+    @media all and (min-width: 600px) {
+
+        /*HEADER NAV*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+    }
+            /*remove this if you do not want the column layout whit logo above menu for medium size screens*/
+
+
+    /*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px){
+    
+}
